@@ -1,5 +1,3 @@
-const fuzzy = require('fuzzy')
-
 export function groupBy<T>(xs: T[], fn: (x: T) => string): Map<string, T[]> {
   const map = new Map()
   for (let x of xs) {
