@@ -1,10 +1,13 @@
 {
   "name": "morrow",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A text based role palying game",
   "bin": {
     "morrow": "./morrow"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
