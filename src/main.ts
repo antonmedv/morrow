@@ -1,13 +1,13 @@
 /// <reference path="./types.d.ts"/>
-import * as readline from 'readline'
 import {readFileSync, writeFile} from 'fs'
 import {dirname} from 'path'
-import update from 'immutability-helper'
+import * as readline from 'readline'
+import * as update from 'immutability-helper'
 import * as PrettyError from 'pretty-error'
-import {describe, describeItem} from './describe'
+import {describe} from './describe'
 import worldMap from './map'
 import {actions, actionsMap} from './actions'
-import {startsWith, mapBy, unique, stringify} from './utils'
+import {noop, startsWith} from './utils'
 import {newGame} from './game'
 
 // Define other imports and configure immutability-helper
@@ -129,8 +129,7 @@ function apply(game: Game, action: Function, arg: any = void 0): Game {
 function save(game: Game, toFile: string) {
   mkdirp(dirname(toFile), (err) => {
     if (err) return
-    writeFile(toFile, JSON.stringify(game, null, 2), err => {
-    })
+    writeFile(toFile, JSON.stringify(game, null, 2), noop)
   })
 }
 

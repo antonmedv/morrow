@@ -26,7 +26,7 @@ npm start
 And run 
 
 ```
-node index.js
+node morrow
 ```
 
 ## License 

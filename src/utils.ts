@@ -1,4 +1,4 @@
-export function groupBy<T>(xs: T[], fn: (x: T) => string): Map<string, T[]> {
+export function groupBy<T, K>(xs: T[], fn: (x: T) => K): Map<K, T[]> {
   const map = new Map()
   for (let x of xs) {
     const key = fn(x)
@@ -11,7 +11,7 @@ export function groupBy<T>(xs: T[], fn: (x: T) => string): Map<string, T[]> {
   return map
 }
 
-export function mapBy<T>(xs: T[], fn: (x: T) => string): Map<string, T> {
+export function mapBy<T, K>(xs: T[], fn: (x: T) => K): Map<K, T> {
   const map = new Map()
   for (let x of xs) {
     map.set(fn(x), x)
@@ -47,6 +47,10 @@ export function stringify(t: string | Item): string {
   } else {
     return t.name
   }
+}
+
+export function noop() {
+  // Do nothing
 }
 
 export function itemName(item: Item) {

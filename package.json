@@ -1,18 +1,18 @@
 {
   "name": "morrow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A text based role palying game",
-  "main": "index.js",
+  "bin": {
+    "morrow": "./morrow"
+  },
   "scripts": {
-    "start": "rollup -cw",
+    "start": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "antonmedv/morrow",
   "author": "Anton Medvedev <anton@medv.io>",
   "license": "MIT",
   "dependencies": {
-    "@types/immutability-helper": "^2.0.15",
-    "@types/indent-string": "^3.0.0",
     "chalk": "^2.3.0",
     "immutability-helper": "^2.5.1",
     "indent-string": "^3.2.0",
@@ -21,9 +21,9 @@
     "runes": "^0.4.3"
   },
   "devDependencies": {
+    "@types/immutability-helper": "^2.0.15",
+    "@types/indent-string": "^3.0.0",
     "@types/node": "^8.0.53",
-    "rollup": "^0.52.0",
-    "rollup-plugin-typescript": "^0.8.1",
     "typescript": "^2.6.2"
   }
 }

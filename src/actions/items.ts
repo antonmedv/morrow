@@ -1,9 +1,9 @@
 import {describeItem, describeItems, put} from '../describe'
-import update from 'immutability-helper'
 import {from} from '../game'
 import {itemName, mapBy} from '../utils'
 import {Action} from './index'
-const chalk = require('chalk')
+import update = require('immutability-helper')
+import chalk from 'chalk'
 
 const actions: Action[] = [
   {

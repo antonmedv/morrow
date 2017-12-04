@@ -2,14 +2,20 @@
   "compilerOptions": {
     "rootDir": "src",
     "target": "es6",
+    "module": "commonjs",
+    "outDir": "dist",
     "lib": ["es6"],
     "moduleResolution": "node",
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noImplicitAny": false,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": false,
-    "allowSyntheticDefaultImports": true
-  }
+    "noImplicitAny": false,
+    "strictNullChecks": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
